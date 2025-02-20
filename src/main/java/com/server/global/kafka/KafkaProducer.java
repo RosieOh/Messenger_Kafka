@@ -9,7 +9,7 @@ public class KafkaProducer {
 
     private final KafkaTemplate<String, String> kafkaTemplate;
 
-    public void send(String topic, String message) {
+    public void sendMessage(String topic, String message) {
         kafkaTemplate.send(topic, message);
         System.out.println("메시지 전송 : " + message);
     }
